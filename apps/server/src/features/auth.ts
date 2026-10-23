@@ -38,7 +38,7 @@ export function createAuthRouter(ctx: AppContext): Router {
     res.json({ account: serializeAccount(row) })
   })
 
-  router.post('/logout', (req, res) => {
+  router.post('/logout', requireAuth, (req, res) => {
     if (req.sessionToken) deleteSession(ctx.db, req.sessionToken)
     res.setHeader('Set-Cookie', clearSessionCookie())
     res.status(204).end()

@@ -1,7 +1,6 @@
 import { Router } from 'express'
 import type { AppContext } from '../context.js'
 import { ApiError } from '../lib/errors.js'
-import { nowIso } from '../lib/dates.js'
 import { serializePet } from '../serialize.js'
 import { requireAuth, requireRole } from '../middleware/auth.js'
 import type { PetRow } from '../types.js'
@@ -51,7 +50,7 @@ export function createPetsRouter(ctx: AppContext): Router {
 
   router.post('/', (req, res) => {
     const payload = parsePetPayload(req.body)
-    const createdAt = nowIso()
+    const createdAt = ctx.now()
     const info = ctx.db
       .prepare(
         `INSERT INTO pets (owner_id, name, species, weight, contact, care_notes, vaccine_notes, created_at)

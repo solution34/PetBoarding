@@ -57,12 +57,23 @@ export function createCatalogRouter(ctx: AppContext): Router {
       .prepare('SELECT * FROM room_types WHERE species = ? ORDER BY id')
       .all(pet.species) as unknown as RoomTypeRow[]
 
-    const items = roomTypes.map((roomType) => {
+    const items: Array<{
+      roomTypeId: number
+      name: string
+      species: 'cat' | 'dog'
+      dailyPriceFen: number
+      plannedDays: number
+      totalFen: number
+      availableRooms: number
+    }> = []
+    for (const roomType of roomTypes) {
       const rooms = ctx.db
         .prepare('SELECT id FROM rooms WHERE room_type_id = ? AND max_weight >= ?')
         .all(roomType.id, pet.weight) as unknown as Array<{ id: number }>
+      // 无满足体重的房间时不作为匹配房型展示；有匹配房间但被占用则显示 0。
+      if (rooms.length === 0) continue
       const availableRooms = rooms.filter((room) => !blocked.has(room.id)).length
-      return {
+      items.push({
         roomTypeId: roomType.id,
         name: roomType.name,
         species: roomType.species,
@@ -70,8 +81,8 @@ export function createCatalogRouter(ctx: AppContext): Router {
         plannedDays,
         totalFen: roomType.daily_price_fen * plannedDays,
         availableRooms
-      }
-    })
+      })
+    }
 
     res.json({ startDate, endDate, plannedDays, items })
   })

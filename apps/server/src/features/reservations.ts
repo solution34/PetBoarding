@@ -5,7 +5,6 @@ import {
   dayDiff,
   endOfBusinessDate,
   isDateString,
-  nowIso,
   parseLocalDateTime,
   shanghaiDateOf
 } from '../lib/dates.js'
@@ -165,7 +164,7 @@ export function createReservationsRouter(ctx: AppContext): Router {
       })
     }
 
-    const createdAt = nowIso()
+    const createdAt = ctx.now()
     const info = ctx.db
       .prepare(
         `INSERT INTO reservations
@@ -232,7 +231,7 @@ export function createReservationsRouter(ctx: AppContext): Router {
 
     ctx.db
       .prepare(`UPDATE reservations SET status = 'cancelled', reason = ?, updated_at = ? WHERE id = ?`)
-      .run(reason, nowIso(), row.id)
+      .run(reason, ctx.now(), row.id)
     const updated = getReservationOrThrow(ctx, row.id)
     res.json({ reservation: serializeReservation(ctx.db, updated) })
   })
@@ -275,7 +274,7 @@ export function createReservationsRouter(ctx: AppContext): Router {
       if (!roomIsFree(ctx, room.id, row.start_date, row.end_date, row.id)) {
         throw ApiError.conflict('ROOM_UNAVAILABLE', '该房间在预约区间内不可用')
       }
-      const reviewedAt = nowIso()
+      const reviewedAt = ctx.now()
       ctx.db
         .prepare(
           `UPDATE reservations
@@ -296,7 +295,7 @@ export function createReservationsRouter(ctx: AppContext): Router {
     const reason = typeof body.reason === 'string' ? body.reason.trim() : ''
     if (!reason) throw ApiError.validation('请填写驳回原因', 'reason')
 
-    const reviewedAt = nowIso()
+    const reviewedAt = ctx.now()
     ctx.db
       .prepare(
         `UPDATE reservations
@@ -319,7 +318,7 @@ export function createReservationsRouter(ctx: AppContext): Router {
     const reason = typeof body.reason === 'string' ? body.reason.trim() : ''
     if (!reason) throw ApiError.validation('请填写失约原因', 'reason')
 
-    const reviewedAt = nowIso()
+    const reviewedAt = ctx.now()
     ctx.db
       .prepare(
         `UPDATE reservations
@@ -361,7 +360,7 @@ export function createReservationsRouter(ctx: AppContext): Router {
       }
       const inspectionNotes =
         typeof body.inspectionNotes === 'string' ? body.inspectionNotes.trim() : ''
-      const checkInAt = nowIso()
+      const checkInAt = ctx.now()
       const stayInfo = ctx.db
         .prepare(
           `INSERT INTO stays
@@ -422,7 +421,7 @@ export function createReservationsRouter(ctx: AppContext): Router {
       throw ApiError.validation('照护任务计划时间不能晚于计划离店日', 'plannedAt')
     }
 
-    const createdAt = nowIso()
+    const createdAt = ctx.now()
     const info = ctx.db
       .prepare(
         `INSERT INTO care_tasks (stay_id, kind, planned_at, instruction, status, created_at, created_by)
@@ -473,7 +472,7 @@ export function createReservationsRouter(ctx: AppContext): Router {
       const baseFeeFen = row.daily_price_snapshot_fen * row.planned_days
       const overdueFeeFen = overdueDays * row.daily_price_snapshot_fen
       const totalFen = baseFeeFen + overdueFeeFen
-      const settledAt = nowIso()
+      const settledAt = ctx.now()
 
       const invoiceInfo = ctx.db
         .prepare(

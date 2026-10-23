@@ -1,7 +1,6 @@
 import { Router } from 'express'
 import type { AppContext } from '../context.js'
 import { ApiError } from '../lib/errors.js'
-import { nowIso } from '../lib/dates.js'
 import { withTransaction } from '../db/index.js'
 import { serializeCareTask } from '../serialize.js'
 import { requireAuth, requireRole } from '../middleware/auth.js'
@@ -33,7 +32,7 @@ export function createCareTasksRouter(ctx: AppContext): Router {
     const updated = withTransaction(ctx.db, () => {
       const current = ctx.db.prepare('SELECT * FROM care_tasks WHERE id = ?').get(taskId) as unknown as CareTaskRow
       if (current.status !== 'pending') throw ApiError.invalidState('该照护任务当前状态不可完成')
-      const completedAt = nowIso()
+      const completedAt = ctx.now()
       ctx.db
         .prepare(
           `INSERT INTO care_records (task_id, staff_id, completed_at, notes) VALUES (?, ?, ?, ?)`

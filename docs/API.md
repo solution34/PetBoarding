@@ -181,7 +181,7 @@ type AvailabilityItem = {
 - 401 `LOGIN_FAILED`：账号或密码错误（不区分具体原因）。
 - 400 `VALIDATION_ERROR`：缺登录名或密码。
 
-`POST /api/auth/logout`：204，删除会话并清除 Cookie。
+`POST /api/auth/logout`：204，删除会话并清除 Cookie；需有效会话，未登录返回 401 `UNAUTHENTICATED`。
 
 `GET /api/auth/me`：200 `{ "account": Account }`；未登录 401。
 
@@ -219,7 +219,7 @@ type AvailabilityItem = {
 }
 ```
 
-- 匹配规则：房型物种 = 宠物物种；房型内存在 `maxWeight >= 宠物体重` 的房间；`availableRooms` 为“同一间房覆盖整个区间”的房间数。
+- 匹配规则：`items` 仅包含「物种与宠物一致，且房型内存在 `maxWeight >= 宠物体重` 的房间」的房型；若某匹配房型下所有房间均不可用，仍返回该房型且 `availableRooms = 0`。无任何匹配房型时 `items` 为空数组。
 - 连续可用计算：对每间候选房间，若存在与其计划区间 `[startDate, endDate)` 重叠（`a.start < b.end && b.start < a.end`）的 `confirmed` / `checked_in` 预约（`room_id` 为该房），或该房间当前存在未离店入住记录，则不算可用。查询不占房。
 - `totalFen` 仅用于页面展示计划基础费，不作为提交依据。
 
@@ -398,7 +398,7 @@ type AvailabilityItem = {
 
 ## 6. 演示日期覆盖（仅演示/自动化）
 
-服务端读取可选环境变量 `PB_TODAY=YYYY-MM-DD`：设置后所有“今天”相关校验与账单计算使用该日期，`GET /api/health` 返回 `{ "today": "YYYY-MM-DD", "clockOverridden": true }`。正常演示不设置该变量，使用真实门店日期。仅用于可控日期下的验收场景，不允许作为生产配置。
+服务端读取可选环境变量 `PB_TODAY=YYYY-MM-DD`：设置后所有“今天”相关校验与账单计算使用该日期，业务操作记录（审核、入住、离店、照护完成等时间戳）的日期部分同样使用该日期（时分秒取真实时刻），`GET /api/health` 返回 `{ "today": "YYYY-MM-DD", "clockOverridden": true }`。正常演示不设置该变量，使用真实门店日期。仅用于可控日期下的验收场景，不允许作为生产配置。
 
 ## 7. 前端页面与接口对应
 

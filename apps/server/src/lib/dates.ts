@@ -39,6 +39,30 @@ export function nowIso(): string {
   return new Date().toISOString()
 }
 
+/**
+ * 业务记录时间戳。演示/验收设置 todayOverride 时，将真实时刻的时分秒套到覆盖日期上，
+ * 保证入住/离店/审核等记录日期与模拟“今天”一致；未设置时返回真实时间。
+ */
+export function nowInShanghai(overrideDate?: string | null): string {
+  if (!overrideDate || !isDateString(overrideDate)) return nowIso()
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: SHANGHAI_TIME_ZONE,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false
+  }).formatToParts(new Date())
+  const valueOf = (type: Intl.DateTimeFormatPartTypes): string =>
+    parts.find((part) => part.type === type)?.value ?? '00'
+  const hour = valueOf('hour') === '24' ? '00' : valueOf('hour')
+  return new Date(
+    `${overrideDate}T${hour}:${valueOf('minute')}:${valueOf('second')}+08:00`
+  ).toISOString()
+}
+
 export function shanghaiDateOf(iso: string): string {
   return new Intl.DateTimeFormat('en-CA', {
     timeZone: SHANGHAI_TIME_ZONE,
