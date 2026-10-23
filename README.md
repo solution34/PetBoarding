@@ -6,15 +6,17 @@
 
 ## 快速开始
 
-环境要求：Node.js ≥ 22.5（后端使用内置 `node:sqlite`）、npm。
+项目背景、角色与范围见 [项目说明](docs/项目说明.md)；完整安装、启动、开发模式及常见问题见 [Demo 启动说明](docs/Demo启动说明.md)。
+
+环境要求：Node.js ≥ 22.12（推荐24.x；同时满足前端Vite和后端内置 `node:sqlite` 要求）、npm。
 
 ```bash
-npm install     # 首次安装依赖
+npm ci          # 首次按锁文件安装依赖
 npm run build   # 编译后端并构建前端（apps/web/dist）
 npm start       # 启动演示服务：http://localhost:3000
 ```
 
-首次启动自动创建 `data/petboarding.db` 并写入演示种子数据。需要恢复初始数据时执行 `npm run db:reset`（删除本地数据库后重新初始化）。演示操作步骤见 [演示操作指南](docs/演示操作指南.md)。
+首次启动自动创建 `data/petboarding.db` 并写入演示种子数据。需要恢复初始数据时，先停止后端并备份需要保留的数据，再执行 `npm run db:reset`（会删除现有本地业务数据）。演示操作步骤见 [演示操作指南](docs/演示操作指南.md)。
 
 演示账号（登录页可一键填入）：
 
