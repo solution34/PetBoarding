@@ -1,0 +1,40 @@
+@startuml
+skinparam defaultFontName Microsoft YaHei
+start
+:主人提交预约;
+:工作人员审核并分房;
+if (审核通过?) then (是)
+  :已确认并预留房间;
+else (否)
+  :驳回并通知主人;
+  stop
+endif
+if (取消或到期未到店?) then (是)
+  :取消或标记失约
+释放计划占用;
+  stop
+else (否)
+  :主人按计划到店;
+endif
+if (资料通过且房间实际空闲?) then (是)
+  :办理入住并制定照护计划;
+else (否)
+  :说明失败原因并人工协调;
+  :本单取消
+需要时重新申请;
+  stop
+endif
+repeat
+  :执行照护并登记
+未完成超时则去重提醒;
+repeat while (继续寄养?) is (是) not (否)
+:主人申请接回;
+repeat
+  :按价格快照计算账单
+由主人核对;
+  :处理异议并确认线下收款;
+repeat while (未确认全额收款?) is (是) not (否)
+:原子登记收款并结单
+释放实际占用;
+stop
+@enduml

@@ -1,0 +1,110 @@
+@startuml
+skinparam defaultFontName Microsoft YaHei
+hide empty members
+class "Account 账户" as Account {
+id
+contact
+roles
+enabled
+--
+canAccess(resource)
+}
+class "Pet 宠物" as Pet {
+id
+species
+weight
+careNotes
+--
+updateProfile()
+}
+class "Room 房间" as Room {
+id
+species
+maxWeight
+dailyPrice
+--
+isAvailable(start, end)
+}
+class "Reservation 预约" as Reservation {
+id
+startDate
+endDate
+status
+roomId
+dailyPriceSnapshot
+--
+approve(room)
+cancel()
+}
+class "Stay 入住" as Stay {
+id
+checkInAt
+checkOutAt
+--
+checkIn()
+close()
+}
+class "CareTask 照护计划" as CareTask {
+id
+kind
+plannedAt
+status
+--
+complete()
+isOverdue()
+}
+class "CareRecord 照护记录" as CareRecord {
+id
+staffId
+completedAt
+notes
+--
+reviseWithAudit()
+}
+class "Reminder 提醒" as Reminder {
+id
+createdAt
+status
+--
+close()
+}
+class "Invoice 结算单" as Invoice {
+id
+totalFen
+status
+--
+calculate()
+settle()
+}
+class "ChargeItem 费用项" as ChargeItem {
+kind
+quantity
+unitPrice
+evidence
+--
+subtotal()
+}
+class "Receipt 收款登记" as Receipt {
+id
+amountFen
+staffId
+paidAt
+--
+validateFullAmount()
+}
+Account "1" -- "0..*" Pet : 拥有
+Pet "1" -- "0..*" Reservation : 被预约
+Room "0..1" -- "0..*" Reservation : 分配给
+Reservation "1" -- "0..1" Stay : 对应
+Stay "1" -- "0..*" CareTask : 安排
+CareTask "1" -- "0..1" CareRecord : 执行结果
+CareTask "1" -- "0..*" Reminder : 产生
+Stay "1" -- "0..1" Invoice : 结算
+Invoice "1" -- "1..*" ChargeItem : 包含
+Invoice "1" -- "0..1" Receipt : 收款
+note bottom of Reservation
+审核后 roomId 和价格快照必填。
+账户通过角色授权，非角色继承。
+每个任务最多一条有效完成记录及一个有效提醒。
+end note
+@enduml

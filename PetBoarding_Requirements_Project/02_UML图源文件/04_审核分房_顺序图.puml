@@ -1,0 +1,26 @@
+@startuml
+skinparam defaultFontName Microsoft YaHei
+autonumber
+actor "工作人员" as P0
+participant "审核页面" as P1
+participant "预约服务" as P2
+participant "业务存储" as P3
+P0 -> P1 : 选择预约和具体房间
+P1 -> P2 : 提交审核通过及确认价格
+P2 -> P3 : 开始事务并锁定相关资源
+P2 -> P3 : 重检待审核及房间日期冲突
+P3 --> P2 : 返回匹配和冲突结果
+alt 校验通过
+P2 -> P3 : 无冲突时保存房间和价格快照
+P2 -> P3 : 更新已确认并提交事务
+P3 --> P2 : 确认提交成功
+P2 -> P3 : 登记审核通知待发送
+P2 --> P1 : 返回审核结果
+else 校验失败或重复请求
+P2 --> P1 : 返回错误原因或既有业务结果
+end
+note over P0,P3
+事务内任何校验失败均回滚，预约保持待审核。
+消息6至8仅在无冲突时执行；驳回是另一条操作，必须填写原因。
+end note
+@enduml

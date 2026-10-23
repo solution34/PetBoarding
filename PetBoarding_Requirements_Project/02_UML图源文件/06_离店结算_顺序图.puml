@@ -1,0 +1,28 @@
+@startuml
+skinparam defaultFontName Microsoft YaHei
+autonumber
+actor "工作人员" as P0
+participant "结算页面" as P1
+participant "结算服务" as P2
+participant "业务存储" as P3
+P0 -> P1 : 输入实际离店日期
+P1 -> P2 : 请求生成账单
+P2 -> P3 : 读取入住及价格快照和附加项
+P3 --> P2 : 返回计费资料
+P2 --> P1 : 返回基本费 逾期费及附加费
+P1 --> P0 : 展示账单供主人核对
+P0 -> P1 : 主人核对后确认线下全额收款
+P1 -> P2 : 提交结单 requestId
+alt 校验通过
+P2 -> P3 : 事务重检状态 金额及重复请求
+P2 -> P3 : 保存收款 关闭入住 更新已完成
+P3 --> P2 : 提交成功并释放实际占用
+P2 --> P1 : 返回结单编号
+else 校验失败或重复请求
+P2 --> P1 : 返回错误原因或既有业务结果
+end
+note over P0,P3
+未全额收款则不提交结单；金额或状态变化需重新核对。
+消息9至11同一事务，失败回滚；重复结单返回已有结果。
+end note
+@enduml

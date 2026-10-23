@@ -1,0 +1,41 @@
+@startuml
+left to right direction
+skinparam defaultFontName Microsoft YaHei
+actor 宠物主人 as Owner
+actor 工作人员 as Staff
+actor 管理员 as Admin
+rectangle "宠物寄养预约与照护管理系统" {
+  usecase "UC01 登录与退出" as UC01
+  usecase "UC02 维护宠物档案" as UC02
+  usecase "UC03 查询可用房间" as UC03
+  usecase "UC04 提交寄养预约" as UC04
+  usecase "UC05 审核预约并分房" as UC05
+  usecase "UC06 取消预约" as UC06
+  usecase "UC07 办理入住" as UC07
+  usecase "UC08 制定与执行照护计划" as UC08
+  usecase "UC09 查看寄养进度" as UC09
+  usecase "UC10 办理离店结算" as UC10
+  usecase "UC11 维护房间与价格" as UC11
+  usecase "UC12 管理工作人员与审计" as UC12
+}
+Owner -- UC01
+Owner -- UC02
+Owner -- UC03
+Owner -- UC04
+Owner -- UC06
+Owner -- UC09
+Owner -- UC10 : 核对账单
+Staff -- UC01
+Staff -- UC05
+Staff -- UC06
+Staff -- UC07
+Staff -- UC08
+Staff -- UC10
+Admin -- UC01
+Admin -- UC11
+Admin -- UC12
+note bottom of UC04
+登录为前置条件，非所有用例均包含登录。
+系统内部定时任务不是外部参与者。
+end note
+@enduml

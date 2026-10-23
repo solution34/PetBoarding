@@ -1,0 +1,26 @@
+@startuml
+skinparam defaultFontName Microsoft YaHei
+autonumber
+actor "宠物主人" as P0
+participant "预约页面" as P1
+participant "预约服务" as P2
+participant "业务存储" as P3
+P0 -> P1 : 填写宠物和日期
+P1 -> P2 : 提交预约 requestId
+P2 -> P3 : 检查请求标识和归属
+P3 --> P2 : 返回既有结果或宠物资料
+P2 -> P3 : 校验日期及宠物预约冲突
+P3 --> P2 : 返回校验结果
+alt 校验通过
+P2 -> P3 : 合法时创建待审核预约
+P3 --> P2 : 返回唯一预约编号
+P2 --> P1 : 返回编号及待审核状态
+P1 --> P0 : 显示申请成功
+else 校验失败或重复请求
+P2 --> P1 : 返回错误原因或既有业务结果
+end
+note over P0,P3
+异常：参数或归属错误时不创建；重复 requestId 返回原结果。
+待审核不占房，查询余量只是参考，审核阶段重新检查。
+end note
+@enduml

@@ -1,0 +1,26 @@
+@startuml
+skinparam defaultFontName Microsoft YaHei
+autonumber
+actor "工作人员" as P0
+participant "入住页面" as P1
+participant "入住服务" as P2
+participant "业务存储" as P3
+P0 -> P1 : 核验宠物及资料并确认通过
+P1 -> P2 : 提交入住 requestId
+P2 -> P3 : 事务中重检订单和计划日期
+P3 --> P2 : 返回已确认订单
+P2 -> P3 : 校验房间无其他未离店入住
+P3 --> P2 : 返回实际占用结果
+alt 校验通过
+P2 -> P3 : 空闲时创建唯一入住记录
+P2 -> P3 : 预约转已入住并提交事务
+P3 --> P2 : 返回入住编号
+P2 --> P1 : 显示成功并触发站内通知
+else 校验失败或重复请求
+P2 --> P1 : 返回错误原因或既有业务结果
+end
+note over P0,P3
+资料不通过不提交入住；逾期占房时消息7至9不执行。
+重复请求返回既有入住；业务状态变更与记录创建同时成功。
+end note
+@enduml
