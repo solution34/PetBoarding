@@ -16,3 +16,23 @@ GEMINI.md
 .cursor/
 .aider*
 .continue/
+
+# Node dependencies and local npm cache
+node_modules/
+.npm-cache/
+.npm/
+
+# Build output
+apps/server/dist/
+apps/web/dist/
+
+# Local database and runtime data
+data/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Local temporary files
+.tmp/
+*.log

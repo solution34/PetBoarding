@@ -1,0 +1,25 @@
+{
+  "name": "petboarding",
+  "version": "1.2.0",
+  "private": true,
+  "description": "宠物寄养预约与照护管理系统 V1.2 Web MVP",
+  "workspaces": [
+    "apps/server",
+    "apps/web"
+  ],
+  "engines": {
+    "node": ">=22.5"
+  },
+  "scripts": {
+    "build": "npm run build:server && npm run build:web",
+    "build:server": "npm run build -w @petboarding/server",
+    "build:web": "npm run build -w @petboarding/web",
+    "start": "npm run start -w @petboarding/server",
+    "dev:server": "npm run dev -w @petboarding/server",
+    "dev:web": "npm run dev -w @petboarding/web",
+    "typecheck": "npm run typecheck -w @petboarding/server && npm run typecheck -w @petboarding/web",
+    "db:reset": "npm run db:reset -w @petboarding/server",
+    "db:seed": "npm run db:seed -w @petboarding/server",
+    "test:acceptance": "node tests/acceptance/run.mjs"
+  }
+}
