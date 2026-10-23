@@ -1,0 +1,18 @@
+# Local AI assistant instructions
+AGENT.md
+AGENTS.md
+AGENTS.override.md
+CLAUDE.md
+GEMINI.md
+.cursorrules
+.cursorignore
+.copilot-instructions.md
+.github/copilot-instructions.md
+
+# Local AI tool settings and session data
+.agents/
+.codex/
+.claude/
+.cursor/
+.aider*
+.continue/
