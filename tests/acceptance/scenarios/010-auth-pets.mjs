@@ -1,6 +1,6 @@
 /**
  * 验收场景 TC01–TC05：认证/权限、宠物档案、房型查询、提交预约。
- * 需求依据见 PetBoarding_Requirements_Project/05_核对与答辩/01_验收场景.md。
+ * 需求依据见 docs/requirements/05_核对与答辩/01_验收场景.md。
  */
 import { ACCOUNTS } from '../lib/fixtures.mjs';
 import { D1, D2, D4, D5, DAY0 } from '../lib/dates.mjs';

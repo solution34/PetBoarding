@@ -85,25 +85,25 @@ npm start       # 启动演示服务：http://localhost:3000
 
 ```text
 PetBoarding/
-├── README.md
+├── README.md                    # 项目总入口
 ├── package.json                 # npm workspaces 与统一脚本
+├── package-lock.json            # 依赖锁文件
 ├── apps/
 │   ├── server/                  # Express + TypeScript + SQLite 后端
-│   │   └── src/                 # 路由/业务规则/数据层、schema、种子数据、脚本
+│   │   └── src/                 # 接口、业务规则、数据库与初始化脚本
 │   └── web/                     # Vue 3 + TypeScript + Vite 前端
-│       └── src/                 # 路由、API 客户端、页面与组件
+│       └── src/                 # 页面、组件、路由与 API 客户端
+├── docs/
+│   ├── README.md                # 文档导航
+│   ├── 项目说明.md
+│   ├── Demo启动说明.md
+│   ├── 演示操作指南.md
+│   ├── API.md
+│   ├── 验收执行记录.md
+│   └── requirements/            # 课程需求、UML、实验报告与答辩资料
 ├── tests/
-│   └── acceptance/              # V1.2 验收自动化脚本与执行结果
-├── docs/                        # API 契约、演示指南、验收执行记录
-├── data/                        # 本地 SQLite 运行文件（首次启动生成，不提交）
-└── PetBoarding_Requirements_Project/
-    ├── README.md
-    ├── 工程阅读入口.html
-    ├── 01_项目与需求/
-    ├── 02_UML图源文件/
-    ├── 03_UML图预览/
-    ├── 04_实验报告/
-    └── 05_核对与答辩/
+│   └── acceptance/              # API 验收脚本、场景及结果证据
+└── data/                        # 本地数据库，不提交
 ```
 
 ## 验收与测试
@@ -119,12 +119,14 @@ node tests/acceptance/run.mjs        # 或 npm run test:acceptance
 
 ## 文档入口
 
-- [MVP 需求基线](PetBoarding_Requirements_Project/01_项目与需求/00_MVP需求基线.md)
-- [软件需求规格说明书](PetBoarding_Requirements_Project/01_项目与需求/02_软件需求规格说明书.md)
-- [详细用例说明](PetBoarding_Requirements_Project/01_项目与需求/03_详细用例说明.md)
-- [需求追踪矩阵](PetBoarding_Requirements_Project/01_项目与需求/04_需求追踪矩阵.md)
-- [课程要求对照与建设计划](PetBoarding_Requirements_Project/01_项目与需求/05_课程要求对照与建设计划.md)
-- [MVP 验收场景](PetBoarding_Requirements_Project/05_核对与答辩/01_验收场景.md)
+完整文档导航见 [docs/README.md](docs/README.md)。
+
+- [MVP 需求基线](docs/requirements/01_项目与需求/00_MVP需求基线.md)
+- [软件需求规格说明书](docs/requirements/01_项目与需求/02_软件需求规格说明书.md)
+- [详细用例说明](docs/requirements/01_项目与需求/03_详细用例说明.md)
+- [需求追踪矩阵](docs/requirements/01_项目与需求/04_需求追踪矩阵.md)
+- [课程要求对照与建设计划](docs/requirements/01_项目与需求/05_课程要求对照与建设计划.md)
+- [MVP 验收场景](docs/requirements/05_核对与答辩/01_验收场景.md)
 - [API 契约](docs/API.md) / [演示操作指南](docs/演示操作指南.md) / [验收执行记录](docs/验收执行记录.md)
 
 需求基线、需求规格、用例、追踪矩阵与验收场景已更新至 V1.2。HTML 阅读入口、UML 和实验报告仍包含旧版规则，使用时以 V1.2 文档为准。

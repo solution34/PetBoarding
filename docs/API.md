@@ -1,7 +1,7 @@
 # 宠物寄养系统 V1.2 Demo API 契约
 
 版本：V1.2-demo-1；日期：2026-10-23。本文件是前端、后端与验收脚本的共同契约，改动须同步三者。
-需求依据：[MVP需求基线](../PetBoarding_Requirements_Project/01_项目与需求/00_MVP需求基线.md)、[软件需求规格说明书](../PetBoarding_Requirements_Project/01_项目与需求/02_软件需求规格说明书.md)、[验收场景](../PetBoarding_Requirements_Project/05_核对与答辩/01_验收场景.md)。
+需求依据：[MVP需求基线](requirements/01_项目与需求/00_MVP需求基线.md)、[软件需求规格说明书](requirements/01_项目与需求/02_软件需求规格说明书.md)、[验收场景](requirements/05_核对与答辩/01_验收场景.md)。
 
 ## 1. 通用约定
 
