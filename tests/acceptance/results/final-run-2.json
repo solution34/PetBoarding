@@ -1,0 +1,232 @@
+{
+  "requirementVersion": "V1.2",
+  "generatedAt": "2026-10-23T02:15:07.988Z",
+  "meta": {
+    "requirementVersion": "V1.2",
+    "backendAppPath": "C:\\Users\\chenyue\\Documents\\ChatGPT\\petboarding\\apps\\server\\dist\\app.js",
+    "nodeVersion": "v24.16.0",
+    "platform": "win32 x64",
+    "startedAt": "2026-10-23T02:15:00.017Z",
+    "finishedAt": "2026-10-23T02:15:07.988Z",
+    "shanghaiToday": "2026-10-23",
+    "todayOverrideBase": "2026-11-01",
+    "executionMode": "自动化 API 测试（进程内 createApp + fetch，非浏览器 UI 测试）",
+    "dbDirectory": "C:\\Users\\chenyue\\Documents\\ChatGPT\\petboarding\\.tmp\\acceptance",
+    "scenarioSelection": null
+  },
+  "total": 30,
+  "passed": 30,
+  "failed": 0,
+  "results": [
+    {
+      "id": "TC01",
+      "title": "预设账号登录与退出",
+      "requirement": "FR01",
+      "status": "PASS",
+      "durationMs": 451
+    },
+    {
+      "id": "TC02",
+      "title": "跨账号归属拒绝（宠物/预约/照护/账单）",
+      "requirement": "FR01/FR09",
+      "status": "PASS",
+      "durationMs": 236
+    },
+    {
+      "id": "TC03",
+      "title": "宠物建档必填校验与正体重",
+      "requirement": "FR02",
+      "status": "PASS",
+      "durationMs": 332
+    },
+    {
+      "id": "TC04",
+      "title": "猫犬分别查询匹配房型、日价、计划总价与连续可用数量",
+      "requirement": "FR03",
+      "status": "PASS",
+      "durationMs": 229
+    },
+    {
+      "id": "TC05",
+      "title": "提交预约生成待审核单并保存日价快照、不分房",
+      "requirement": "FR04",
+      "status": "PASS",
+      "durationMs": 226
+    },
+    {
+      "id": "TC07",
+      "title": "重叠预约顺序审核：普通可用性检查、其他空房仍可选",
+      "requirement": "FR05",
+      "status": "PASS",
+      "durationMs": 223
+    },
+    {
+      "id": "TC09",
+      "title": "提交后调价不追溯：旧单 80 元、新单 90 元",
+      "requirement": "FR04/FR12",
+      "status": "PASS",
+      "durationMs": 210
+    },
+    {
+      "id": "TC10",
+      "title": "取消本人待审核/已确认预约，释放计划占用",
+      "requirement": "FR06",
+      "status": "PASS",
+      "durationMs": 218
+    },
+    {
+      "id": "TC11",
+      "title": "到计划离店日手动标记失约并释放计划占用",
+      "requirement": "FR06",
+      "status": "PASS",
+      "durationMs": 311
+    },
+    {
+      "id": "TC12",
+      "title": "开始日资料通过且实际空房办理入住",
+      "requirement": "FR07",
+      "status": "PASS",
+      "durationMs": 210
+    },
+    {
+      "id": "TC15",
+      "title": "照护任务创建/完成/主人可见（类型、计划时间、执行人、完成时间、说明）",
+      "requirement": "FR08/FR09",
+      "status": "PASS",
+      "durationMs": 217
+    },
+    {
+      "id": "TC25",
+      "title": "驳回待审核单需填写原因且不占房",
+      "requirement": "FR05",
+      "status": "PASS",
+      "durationMs": 210
+    },
+    {
+      "id": "TC26",
+      "title": "延迟入住需原因，离店日与基础费不变",
+      "requirement": "FR07/FR11",
+      "status": "PASS",
+      "durationMs": 308
+    },
+    {
+      "id": "TC27",
+      "title": "早于开始日、到达计划离店日办理入住均被拒绝",
+      "requirement": "FR07",
+      "status": "PASS",
+      "durationMs": 316
+    },
+    {
+      "id": "TC17",
+      "title": "80 元/天 11-01 至 11-04、11-03 接回：基础费 240 元、无逾期费、不减费",
+      "requirement": "FR11",
+      "status": "PASS",
+      "durationMs": 314
+    },
+    {
+      "id": "TC18",
+      "title": "同预约 11-05 离店：基础费 240 元 + 逾期费 80 元 = 320 元",
+      "requirement": "FR11",
+      "status": "PASS",
+      "durationMs": 311
+    },
+    {
+      "id": "TC23",
+      "title": "两房各空半段不拼接余量：整段连续可用数为 0",
+      "requirement": "FR03",
+      "status": "PASS",
+      "durationMs": 216
+    },
+    {
+      "id": "TC24",
+      "title": "页面价 80 元提交前调 90 元：409 PRICE_CHANGED，重新确认后按 90 元创建",
+      "requirement": "FR04",
+      "status": "PASS",
+      "durationMs": 203
+    },
+    {
+      "id": "TC28",
+      "title": "结单取消待完成任务并保留完成记录，离店后不能再新增/完成任务",
+      "requirement": "FR08/FR11",
+      "status": "PASS",
+      "durationMs": 216
+    },
+    {
+      "id": "TC29",
+      "title": "刷新/重新登录后预约、房型、价格、照护、账单仍可读取，空记录有空状态",
+      "requirement": "FR09",
+      "status": "PASS",
+      "durationMs": 315
+    },
+    {
+      "id": "TC30",
+      "title": "主人核对后全额线下收款结单（现金/转账）；未确认收款不结单",
+      "requirement": "FR11",
+      "status": "PASS",
+      "durationMs": 221
+    },
+    {
+      "id": "TC31",
+      "title": "管理员修改房型日价与房间名称/体重限制，历史订单快照不变",
+      "requirement": "FR12",
+      "status": "PASS",
+      "durationMs": 219
+    },
+    {
+      "id": "C-AUTH-401",
+      "title": "契约：未登录访问受保护接口一律 401 UNAUTHENTICATED",
+      "requirement": "docs/API.md §1/§4",
+      "status": "PASS",
+      "durationMs": 241
+    },
+    {
+      "id": "C-AUTHZ-403",
+      "title": "契约：角色越权一律 403 FORBIDDEN",
+      "requirement": "docs/API.md §4",
+      "status": "PASS",
+      "durationMs": 210
+    },
+    {
+      "id": "C-VALIDATION-400",
+      "title": "契约：无效日期/必填项一律 400 VALIDATION_ERROR",
+      "requirement": "docs/API.md §5.2/5.3/5.4",
+      "status": "PASS",
+      "durationMs": 208
+    },
+    {
+      "id": "C-PRICE-CHANGED",
+      "title": "契约：PRICE_CHANGED 的 details 含新日价/天数/总额且不创建预约",
+      "requirement": "docs/API.md §5.4",
+      "status": "PASS",
+      "durationMs": 205
+    },
+    {
+      "id": "C-PET-OVERLAP",
+      "title": "契约：同宠物与已确认/已入住预约区间重叠返回 409 PET_OVERLAP",
+      "requirement": "docs/API.md §5.4 / BR01",
+      "status": "PASS",
+      "durationMs": 207
+    },
+    {
+      "id": "C-ROOM-UNAVAILABLE",
+      "title": "契约：房型不符/区间冲突/当前被占返回 409 ROOM_UNAVAILABLE",
+      "requirement": "docs/API.md §5.6 / BR06",
+      "status": "PASS",
+      "durationMs": 313
+    },
+    {
+      "id": "C-BILL-EXACT",
+      "title": "契约：结单后状态 completed、账单金额精确到分且重启后持久化",
+      "requirement": "docs/API.md §5.10 / BR09/BR11",
+      "status": "PASS",
+      "durationMs": 411
+    },
+    {
+      "id": "C-HEALTH",
+      "title": "契约：健康检查返回正确的 today 与 clockOverridden（PB_TODAY 覆盖）",
+      "requirement": "docs/API.md §6",
+      "status": "PASS",
+      "durationMs": 403
+    }
+  ]
+}

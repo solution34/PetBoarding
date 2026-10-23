@@ -127,8 +127,18 @@ export function toLocalApiDateTime(value: string): string {
   return `${match[1] ?? ''}T${match[2] ?? ''}`
 }
 
-/** 在住照护任务默认计划时间：今天（若已过计划离店日则取离店日）当前时刻。 */
+/** 在住照护任务默认计划时间：当前时刻 + 30 分钟，并限制在计划离店日 23:59 之前。 */
 export function defaultCareTaskPlannedAt(plannedCheckOutDate: string, today: string): string {
-  const baseDate = today > plannedCheckOutDate ? plannedCheckOutDate : today
-  return `${baseDate}T${currentTimeInShanghai()}`
+  if (today > plannedCheckOutDate) {
+    // 已逾期仍在住：计划时间不能晚于原计划离店日 23:59
+    return `${plannedCheckOutDate}T20:00`
+  }
+  const map = partMap(new Date(Date.now() + 30 * 60_000))
+  let date = `${map.year ?? '1970'}-${map.month ?? '01'}-${map.day ?? '01'}`
+  let time = `${map.hour ?? '00'}:${map.minute ?? '00'}`
+  if (date > plannedCheckOutDate) {
+    date = plannedCheckOutDate
+    time = '23:59'
+  }
+  return `${date}T${time}`
 }

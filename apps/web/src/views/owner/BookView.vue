@@ -257,10 +257,6 @@ async function submitReservation(): Promise<void> {
     </section>
 
     <template v-else>
-      <div v-if="created" class="alert alert--info">
-        预约 #{{ created.id }}（宠物：{{ created.petName }}）已进入待审核状态，工作人员审核通过并分配房间后会显示在「我的订单」中。
-      </div>
-
       <section v-if="queried && availability" class="card">
         <header class="card__header">
           <div>

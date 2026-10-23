@@ -8,11 +8,24 @@ import { CheckFailure } from './assert.mjs';
 import { ROOM_TYPE_FIXTURES, PET_FIXTURES, ACCOUNTS } from './fixtures.mjs';
 import { Session } from './harness.mjs';
 
-/** 登录四个预置账号，返回 { ownerA, ownerB, staff, admin, anon }。 */
-export async function loginAllSessions(harness) {
-  const sessions = { anon: new Session(harness, 'anon') };
+/**
+ * 登录四个预置账号，返回 { ownerA, ownerB, staff, admin, anon }。
+ * 多阶段日期场景会重新 createApp：传入 existing 时原地复用 Session 对象，
+ * 使场景里提前保存的 `const staff = t.s.staff` 引用在 t.phase() 后依旧指向新后端实例。
+ */
+export async function loginAllSessions(harness, existing = {}) {
+  const sessions = existing;
+  sessions.anon = existing.anon ?? new Session(harness, 'anon');
+  sessions.anon.harness = harness;
+  sessions.anon.jar.clear();
+  sessions.anon.account = null;
+
   for (const account of ACCOUNTS) {
-    const session = new Session(harness, account.key);
+    const session = existing[account.key] ?? new Session(harness, account.key);
+    session.harness = harness;
+    session.jar.clear();
+    session.account = null;
+    session.loginName = null;
     const response = await session.login(account.loginName, account.password);
     if (response.status !== 200) {
       throw new CheckFailure(`预置账号 ${account.loginName} 登录失败（种子数据或认证接口异常）`, {

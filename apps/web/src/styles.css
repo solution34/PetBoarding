@@ -196,6 +196,15 @@ a {
   margin-top: 16px;
 }
 
+.ml-8 {
+  margin-left: 8px;
+}
+
+.required {
+  color: var(--color-danger);
+  margin-left: 2px;
+}
+
 /* ============ 顶部导航 ============ */
 
 .app-header {

@@ -59,10 +59,10 @@ function canNoShow(item: Reservation): boolean {
 
 function checkinWindowHint(item: Reservation): string {
   if (clockState.today < item.startDate) {
-    return `未到计划开始日（${item.startDate}），暂不能办理入住。`
+    return `未到计划开始日（${formatDateCN(item.startDate)}），暂不能办理入住。`
   }
   if (clockState.today >= item.endDate) {
-    return `已到/超过计划离店日（${item.endDate}），不能办理入住；如未到店可标记失约。`
+    return `已到/超过计划离店日（${formatDateCN(item.endDate)}），不能办理入住；如未到店可标记失约。`
   }
   return '当前日期在允许入住区间内，可办理入住。'
 }

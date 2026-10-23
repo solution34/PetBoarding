@@ -61,7 +61,7 @@ export class ScenarioRunner {
       kind: 'phase',
       message: `后端启动（today=${todayOverride ?? '(真实门店日期)'}，db=${path.basename(this.dbPath)}）`,
     });
-    this.s = await loginAllSessions(harness);
+    this.s = await loginAllSessions(harness, this.s);
     if (!this.refs) this.refs = await loadSeedRefs(this.s, this.trace);
     return this;
   }

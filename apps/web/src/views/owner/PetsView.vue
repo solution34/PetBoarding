@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { onMounted, reactive, ref } from 'vue'
-import type { Pet, Species } from '../api/types'
-import { createPet, listPets, updatePet } from '../api'
-import { useFeedback } from '../composables/useFeedback'
-import { getErrorField } from '../utils/errors'
-import { formatWeight, speciesLabel } from '../utils/format'
+import type { Pet, Species } from '../../api/types'
+import { createPet, listPets, updatePet } from '../../api'
+import { useFeedback } from '../../composables/useFeedback'
+import { getErrorField } from '../../utils/errors'
+import { formatWeight, speciesLabel } from '../../utils/format'
 
 interface PetForm {
   name: string
