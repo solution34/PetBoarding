@@ -1,6 +1,6 @@
 /**
  * 验收场景 TC01–TC05：认证/权限、宠物档案、房型查询、提交预约。
- * 需求依据见 docs/requirements/05_核对与答辩/01_验收场景.md。
+ * 需求依据为 Git f2be3e7 保存的 V1.2 验收场景，新需求入口见 docs/requirements/01_项目需求/需求说明书.md。
  */
 import { ACCOUNTS } from '../lib/fixtures.mjs';
 import { D1, D2, D4, D5, DAY0 } from '../lib/dates.mjs';
