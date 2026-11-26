@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1960" height="1800" viewBox="0 0 1960 1800">
+<title>宠物寄宿系统分区用例图——Visio绘制布局参考，非Visio导出</title>
+<rect width="100%" height="100%" fill="white"/>
+<polygon points="650,35 785,35 800,50 800,95 650,95 650,35" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<polyline points="650.00,35.00 785.00,35.00 800.00,50.00 800.00,95.00 650.00,95.00 650.00,35.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="785.00,35.00 785.00,50.00 800.00,50.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<text x="720" y="54" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="18" fill="#222222">宠物寄宿</text>
+<text x="720" y="78" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="18" fill="#222222">Web系统</text>
+<polyline points="122.00,413.00 407.00,180.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="398.25,182.11 407.00,180.00 403.19,188.16" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="122.00,413.00 407.00,260.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="398.01,260.39 407.00,260.00 401.70,267.28" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="122.00,413.00 407.00,340.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="398.18,338.23 407.00,340.00 400.11,345.79" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="122.00,413.00 407.00,420.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="398.99,415.90 407.00,420.00 398.80,423.70" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="122.00,413.00 407.00,500.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="400.38,493.90 407.00,500.00 398.10,501.37" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="122.00,413.00 407.00,580.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="401.98,572.53 407.00,580.00 398.03,579.27" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="122.00,413.00 407.00,660.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="403.43,651.74 407.00,660.00 398.31,657.64" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="493.00,340.00 647.00,340.00" fill="none" stroke="#ce577a" stroke-width="1" stroke-dasharray="5 4"/>
+<polyline points="638.89,336.10 647.00,340.00 638.89,343.90" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1082.00,453.00 1437.00,180.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1428.19,181.85 1437.00,180.00 1432.95,188.04" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1082.00,453.00 1437.00,260.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1428.01,260.44 1437.00,260.00 1431.74,267.30" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1082.00,453.00 1437.00,380.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1428.27,377.81 1437.00,380.00 1429.84,385.46" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1082.00,453.00 1437.00,500.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1429.47,495.06 1437.00,500.00 1428.45,502.81" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1082.00,453.00 1437.00,580.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1430.68,573.59 1437.00,580.00 1428.05,580.95" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1082.00,453.00 1437.00,660.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1431.96,652.54 1437.00,660.00 1428.03,659.29" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1082.00,453.00 1437.00,740.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1433.15,731.87 1437.00,740.00 1428.24,737.94" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1523.00,260.00 1697.00,260.00" fill="none" stroke="#ce577a" stroke-width="1" stroke-dasharray="5 4"/>
+<polyline points="1688.89,256.10 1697.00,260.00 1688.89,263.90" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1523.00,580.00 1697.00,580.00" fill="none" stroke="#ce577a" stroke-width="1" stroke-dasharray="5 4"/>
+<polyline points="1688.89,576.10 1697.00,580.00 1688.89,583.90" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1697.00,350.00 1523.00,380.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polygon points="1537.42,384.12 1523.00,380.00 1535.21,371.29" fill="white" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1697.00,460.00 1523.00,380.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polygon points="1532.56,391.56 1523.00,380.00 1538.00,379.73" fill="white" stroke="#ce577a" stroke-width="1"/>
+<polyline points="122.00,1103.00 407.00,930.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="398.04,930.87 407.00,930.00 402.09,937.55" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="122.00,1103.00 407.00,1050.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="398.31,1047.64 407.00,1050.00 399.74,1055.32" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="122.00,1103.00 407.00,1170.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="400.00,1164.34 407.00,1170.00 398.21,1171.95" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="122.00,1103.00 407.00,1290.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="402.36,1282.29 407.00,1290.00 398.08,1288.82" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1082.00,1103.00 1437.00,900.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1428.02,900.64 1437.00,900.00 1431.90,907.42" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1082.00,1103.00 1437.00,1000.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1428.12,998.51 1437.00,1000.00 1430.30,1006.01" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1082.00,1103.00 1437.00,1100.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1428.86,1096.16 1437.00,1100.00 1428.92,1103.97" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1082.00,1103.00 1437.00,1240.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1430.84,1233.44 1437.00,1240.00 1428.03,1240.72" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1697.00,1240.00 1523.00,1240.00" fill="none" stroke="#ce577a" stroke-width="1" stroke-dasharray="5 4"/>
+<polyline points="1531.11,1243.90 1523.00,1240.00 1531.11,1236.10" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="122.00,1633.00 407.00,1640.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="398.99,1635.90 407.00,1640.00 398.80,1643.70" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1200.00,1640.00 1417.00,1640.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1408.89,1636.10 1417.00,1640.00 1408.89,1643.90" fill="none" stroke="#ce577a" stroke-width="1"/>
+<circle cx="100.0" cy="391.0" r="9" fill="white" stroke="#ce577a" stroke-width="1"/>
+<polyline points="100.00,400.00 100.00,430.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="78.00,413.00 122.00,413.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="80.00,454.00 100.00,430.00 120.00,454.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<text x="100.0" y="477.0" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">宠物主人</text>
+<ellipse cx="450.0" cy="180.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="450.0" y="222" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">维护宠物资料</text>
+<ellipse cx="450.0" cy="260.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="450.0" y="302" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">查询可预约房源</text>
+<ellipse cx="450.0" cy="340.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="450.0" y="382" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">提交寄宿预约</text>
+<ellipse cx="450.0" cy="420.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="450.0" y="462" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">支付预约全款</text>
+<ellipse cx="450.0" cy="500.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="450.0" y="542" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">查看订单及进度</text>
+<ellipse cx="450.0" cy="580.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="450.0" y="622" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">查看照护情况</text>
+<ellipse cx="450.0" cy="660.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="450.0" y="702" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">核对与离店</text>
+<ellipse cx="690.0" cy="340.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="690.0" y="382" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">校验并预留房间</text>
+<circle cx="1060.0" cy="431.0" r="9" fill="white" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1060.00,440.00 1060.00,470.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1038.00,453.00 1082.00,453.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1040.00,494.00 1060.00,470.00 1080.00,494.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<text x="1060.0" y="517.0" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">前台接待员</text>
+<ellipse cx="1480.0" cy="180.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="1480.0" y="222" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">维护可预约房源</text>
+<ellipse cx="1480.0" cy="260.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="1480.0" y="302" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">线下正式接单</text>
+<ellipse cx="1480.0" cy="380.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="1480.0" y="422" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">安排照护责任</text>
+<ellipse cx="1480.0" cy="500.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="1480.0" y="542" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">办理入住</text>
+<ellipse cx="1480.0" cy="580.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="1480.0" y="622" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">核对与离店</text>
+<ellipse cx="1480.0" cy="660.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="1480.0" y="702" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">查看订单及进度</text>
+<ellipse cx="1480.0" cy="740.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="1480.0" y="782" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">上报突发事项</text>
+<ellipse cx="1740.0" cy="260.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="1740.0" y="302" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">核验预约及付款</text>
+<ellipse cx="1740.0" cy="580.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="1740.0" y="622" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">核验接回人信息</text>
+<ellipse cx="1740.0" cy="350.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="1740.0" y="392" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">初次分配照护员</text>
+<ellipse cx="1740.0" cy="460.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="1740.0" y="502" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">日常转派照护员</text>
+<circle cx="100.0" cy="1081.0" r="9" fill="white" stroke="#ce577a" stroke-width="1"/>
+<polyline points="100.00,1090.00 100.00,1120.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="78.00,1103.00 122.00,1103.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="80.00,1144.00 100.00,1120.00 120.00,1144.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<text x="100.0" y="1167.0" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">宠物照护员</text>
+<ellipse cx="450.0" cy="930.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="450.0" y="972" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">查看订单及进度</text>
+<ellipse cx="450.0" cy="1050.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="450.0" y="1092" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">安排照护事项</text>
+<ellipse cx="450.0" cy="1170.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="450.0" y="1212" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">登记照护结果</text>
+<ellipse cx="450.0" cy="1290.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="450.0" y="1332" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">上报突发事项</text>
+<circle cx="1060.0" cy="1081.0" r="9" fill="white" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1060.00,1090.00 1060.00,1120.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1038.00,1103.00 1082.00,1103.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="1040.00,1144.00 1060.00,1120.00 1080.00,1144.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<text x="1060.0" y="1167.0" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">店长</text>
+<ellipse cx="1480.0" cy="900.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="1480.0" y="942" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">查看订单及进度</text>
+<ellipse cx="1480.0" cy="1000.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="1480.0" y="1042" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">查看照护情况</text>
+<ellipse cx="1480.0" cy="1100.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="1480.0" y="1142" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">安排照护事项</text>
+<ellipse cx="1480.0" cy="1240.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="1480.0" y="1282" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">处理突发事项</text>
+<ellipse cx="1740.0" cy="1240.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="1740.0" y="1282" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">紧急调整照护人员</text>
+<circle cx="100.0" cy="1611.0" r="9" fill="white" stroke="#ce577a" stroke-width="1"/>
+<polyline points="100.00,1620.00 100.00,1650.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="78.00,1633.00 122.00,1633.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<polyline points="80.00,1674.00 100.00,1650.00 120.00,1674.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<text x="100.0" y="1697.0" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">系统管理员</text>
+<ellipse cx="450.0" cy="1640.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="450.0" y="1682" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">管理账号与权限</text>
+<rect x="1020" y="1602" width="180" height="76" fill="#fffedb" stroke="#ce577a"/>
+<polyline points="1020.00,1626.00 1200.00,1626.00" fill="none" stroke="#ce577a" stroke-width="1"/>
+<text x="1110.0" y="1615" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="18" fill="#222222">«actor»</text>
+<text x="1110.0" y="1642" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">外部支付平台</text>
+<text x="1110.0" y="1665" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="16" fill="#222222">微信支付／支付宝</text>
+<ellipse cx="1460.0" cy="1640.0" rx="43.0" ry="19.0" fill="#fffedb" stroke="#ce577a" stroke-width="1"/>
+<text x="1460.0" y="1682" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="20" fill="#222222">支付预约全款</text>
+<text x="570" y="315" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="18" fill="#222222">«include»</text>
+<text x="1610" y="235" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="18" fill="#222222">«include»</text>
+<text x="1610" y="555" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="18" fill="#222222">«include»</text>
+<text x="1610" y="1215" text-anchor="middle" dominant-baseline="central" font-family="SimSun,serif" font-size="18" fill="#222222">«extend»</text>
+</svg>

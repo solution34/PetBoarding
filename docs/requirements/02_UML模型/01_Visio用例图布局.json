@@ -1,0 +1,943 @@
+{
+  "width": 1960,
+  "height": 1800,
+  "render_scale": 2,
+  "status": "layout_reference_not_visio_export",
+  "relationship_routing": "straight",
+  "template": "UML 用例 / UML Use Case",
+  "nodes": {
+    "owner:actor": {
+      "key": "owner:actor",
+      "id": "owner",
+      "label": "宠物主人",
+      "kind": "actor",
+      "view": "owner",
+      "x": 78,
+      "y": 382,
+      "w": 44,
+      "h": 76
+    },
+    "owner:UC-01": {
+      "key": "owner:UC-01",
+      "id": "UC-01",
+      "label": "维护宠物资料",
+      "kind": "usecase",
+      "view": "owner",
+      "x": 407,
+      "y": 161,
+      "w": 86,
+      "h": 38
+    },
+    "owner:UC-18": {
+      "key": "owner:UC-18",
+      "id": "UC-18",
+      "label": "查询可预约房源",
+      "kind": "usecase",
+      "view": "owner",
+      "x": 407,
+      "y": 241,
+      "w": 86,
+      "h": 38
+    },
+    "owner:UC-02": {
+      "key": "owner:UC-02",
+      "id": "UC-02",
+      "label": "提交寄宿预约",
+      "kind": "usecase",
+      "view": "owner",
+      "x": 407,
+      "y": 321,
+      "w": 86,
+      "h": 38
+    },
+    "owner:UC-14": {
+      "key": "owner:UC-14",
+      "id": "UC-14",
+      "label": "支付预约全款",
+      "kind": "usecase",
+      "view": "owner",
+      "x": 407,
+      "y": 401,
+      "w": 86,
+      "h": 38
+    },
+    "owner:UC-03": {
+      "key": "owner:UC-03",
+      "id": "UC-03",
+      "label": "查看订单及进度",
+      "kind": "usecase",
+      "view": "owner",
+      "x": 407,
+      "y": 481,
+      "w": 86,
+      "h": 38
+    },
+    "owner:UC-09": {
+      "key": "owner:UC-09",
+      "id": "UC-09",
+      "label": "查看照护情况",
+      "kind": "usecase",
+      "view": "owner",
+      "x": 407,
+      "y": 561,
+      "w": 86,
+      "h": 38
+    },
+    "owner:UC-12": {
+      "key": "owner:UC-12",
+      "id": "UC-12",
+      "label": "核对与离店",
+      "kind": "usecase",
+      "view": "owner",
+      "x": 407,
+      "y": 641,
+      "w": 86,
+      "h": 38
+    },
+    "owner:S-01": {
+      "key": "owner:S-01",
+      "id": "S-01",
+      "label": "校验并预留房间",
+      "kind": "usecase",
+      "view": "owner",
+      "x": 647,
+      "y": 321,
+      "w": 86,
+      "h": 38
+    },
+    "front:actor": {
+      "key": "front:actor",
+      "id": "front",
+      "label": "前台接待员",
+      "kind": "actor",
+      "view": "front",
+      "x": 1038,
+      "y": 422,
+      "w": 44,
+      "h": 76
+    },
+    "front:UC-04": {
+      "key": "front:UC-04",
+      "id": "UC-04",
+      "label": "维护可预约房源",
+      "kind": "usecase",
+      "view": "front",
+      "x": 1437,
+      "y": 161,
+      "w": 86,
+      "h": 38
+    },
+    "front:UC-17": {
+      "key": "front:UC-17",
+      "id": "UC-17",
+      "label": "线下正式接单",
+      "kind": "usecase",
+      "view": "front",
+      "x": 1437,
+      "y": 241,
+      "w": 86,
+      "h": 38
+    },
+    "front:UC-05": {
+      "key": "front:UC-05",
+      "id": "UC-05",
+      "label": "安排照护责任",
+      "kind": "usecase",
+      "view": "front",
+      "x": 1437,
+      "y": 361,
+      "w": 86,
+      "h": 38
+    },
+    "front:UC-06": {
+      "key": "front:UC-06",
+      "id": "UC-06",
+      "label": "办理入住",
+      "kind": "usecase",
+      "view": "front",
+      "x": 1437,
+      "y": 481,
+      "w": 86,
+      "h": 38
+    },
+    "front:UC-12": {
+      "key": "front:UC-12",
+      "id": "UC-12",
+      "label": "核对与离店",
+      "kind": "usecase",
+      "view": "front",
+      "x": 1437,
+      "y": 561,
+      "w": 86,
+      "h": 38
+    },
+    "front:UC-03": {
+      "key": "front:UC-03",
+      "id": "UC-03",
+      "label": "查看订单及进度",
+      "kind": "usecase",
+      "view": "front",
+      "x": 1437,
+      "y": 641,
+      "w": 86,
+      "h": 38
+    },
+    "front:UC-10": {
+      "key": "front:UC-10",
+      "id": "UC-10",
+      "label": "上报突发事项",
+      "kind": "usecase",
+      "view": "front",
+      "x": 1437,
+      "y": 721,
+      "w": 86,
+      "h": 38
+    },
+    "front:S-02": {
+      "key": "front:S-02",
+      "id": "S-02",
+      "label": "核验预约及付款",
+      "kind": "usecase",
+      "view": "front",
+      "x": 1697,
+      "y": 241,
+      "w": 86,
+      "h": 38
+    },
+    "front:S-03": {
+      "key": "front:S-03",
+      "id": "S-03",
+      "label": "核验接回人信息",
+      "kind": "usecase",
+      "view": "front",
+      "x": 1697,
+      "y": 561,
+      "w": 86,
+      "h": 38
+    },
+    "front:UC-05A": {
+      "key": "front:UC-05A",
+      "id": "UC-05A",
+      "label": "初次分配照护员",
+      "kind": "usecase",
+      "view": "front",
+      "x": 1697,
+      "y": 331,
+      "w": 86,
+      "h": 38
+    },
+    "front:UC-05B": {
+      "key": "front:UC-05B",
+      "id": "UC-05B",
+      "label": "日常转派照护员",
+      "kind": "usecase",
+      "view": "front",
+      "x": 1697,
+      "y": 441,
+      "w": 86,
+      "h": 38
+    },
+    "care:actor": {
+      "key": "care:actor",
+      "id": "care",
+      "label": "宠物照护员",
+      "kind": "actor",
+      "view": "care",
+      "x": 78,
+      "y": 1072,
+      "w": 44,
+      "h": 76
+    },
+    "care:UC-03": {
+      "key": "care:UC-03",
+      "id": "UC-03",
+      "label": "查看订单及进度",
+      "kind": "usecase",
+      "view": "care",
+      "x": 407,
+      "y": 911,
+      "w": 86,
+      "h": 38
+    },
+    "care:UC-07": {
+      "key": "care:UC-07",
+      "id": "UC-07",
+      "label": "安排照护事项",
+      "kind": "usecase",
+      "view": "care",
+      "x": 407,
+      "y": 1031,
+      "w": 86,
+      "h": 38
+    },
+    "care:UC-08": {
+      "key": "care:UC-08",
+      "id": "UC-08",
+      "label": "登记照护结果",
+      "kind": "usecase",
+      "view": "care",
+      "x": 407,
+      "y": 1151,
+      "w": 86,
+      "h": 38
+    },
+    "care:UC-10": {
+      "key": "care:UC-10",
+      "id": "UC-10",
+      "label": "上报突发事项",
+      "kind": "usecase",
+      "view": "care",
+      "x": 407,
+      "y": 1271,
+      "w": 86,
+      "h": 38
+    },
+    "manager:actor": {
+      "key": "manager:actor",
+      "id": "manager",
+      "label": "店长",
+      "kind": "actor",
+      "view": "manager",
+      "x": 1038,
+      "y": 1072,
+      "w": 44,
+      "h": 76
+    },
+    "manager:UC-03": {
+      "key": "manager:UC-03",
+      "id": "UC-03",
+      "label": "查看订单及进度",
+      "kind": "usecase",
+      "view": "manager",
+      "x": 1437,
+      "y": 881,
+      "w": 86,
+      "h": 38
+    },
+    "manager:UC-09": {
+      "key": "manager:UC-09",
+      "id": "UC-09",
+      "label": "查看照护情况",
+      "kind": "usecase",
+      "view": "manager",
+      "x": 1437,
+      "y": 981,
+      "w": 86,
+      "h": 38
+    },
+    "manager:UC-07": {
+      "key": "manager:UC-07",
+      "id": "UC-07",
+      "label": "安排照护事项",
+      "kind": "usecase",
+      "view": "manager",
+      "x": 1437,
+      "y": 1081,
+      "w": 86,
+      "h": 38
+    },
+    "manager:UC-11": {
+      "key": "manager:UC-11",
+      "id": "UC-11",
+      "label": "处理突发事项",
+      "kind": "usecase",
+      "view": "manager",
+      "x": 1437,
+      "y": 1221,
+      "w": 86,
+      "h": 38
+    },
+    "manager:E-01": {
+      "key": "manager:E-01",
+      "id": "E-01",
+      "label": "紧急调整照护人员",
+      "kind": "usecase",
+      "view": "manager",
+      "x": 1697,
+      "y": 1221,
+      "w": 86,
+      "h": 38
+    },
+    "admin:actor": {
+      "key": "admin:actor",
+      "id": "admin",
+      "label": "系统管理员",
+      "kind": "actor",
+      "view": "admin",
+      "x": 78,
+      "y": 1602,
+      "w": 44,
+      "h": 76
+    },
+    "admin:UC-13": {
+      "key": "admin:UC-13",
+      "id": "UC-13",
+      "label": "管理账号与权限",
+      "kind": "usecase",
+      "view": "admin",
+      "x": 407,
+      "y": 1621,
+      "w": 86,
+      "h": 38
+    },
+    "payment:actor": {
+      "key": "payment:actor",
+      "id": "payment",
+      "label": "外部支付平台",
+      "kind": "external",
+      "view": "payment",
+      "x": 1020,
+      "y": 1602,
+      "w": 180,
+      "h": 76
+    },
+    "payment:UC-14": {
+      "key": "payment:UC-14",
+      "id": "UC-14",
+      "label": "支付预约全款",
+      "kind": "usecase",
+      "view": "payment",
+      "x": 1417,
+      "y": 1621,
+      "w": 86,
+      "h": 38
+    }
+  },
+  "edges": [
+    {
+      "key": "edge-01",
+      "source": "owner:actor",
+      "target": "owner:UC-01",
+      "kind": "association",
+      "points": [
+        [
+          122,
+          413
+        ],
+        [
+          407.0,
+          180.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "key": "edge-02",
+      "source": "owner:actor",
+      "target": "owner:UC-18",
+      "kind": "association",
+      "points": [
+        [
+          122,
+          413
+        ],
+        [
+          407.0,
+          260.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "key": "edge-03",
+      "source": "owner:actor",
+      "target": "owner:UC-02",
+      "kind": "association",
+      "points": [
+        [
+          122,
+          413
+        ],
+        [
+          407.0,
+          340.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "key": "edge-04",
+      "source": "owner:actor",
+      "target": "owner:UC-14",
+      "kind": "association",
+      "points": [
+        [
+          122,
+          413
+        ],
+        [
+          407.0,
+          420.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "key": "edge-05",
+      "source": "owner:actor",
+      "target": "owner:UC-03",
+      "kind": "association",
+      "points": [
+        [
+          122,
+          413
+        ],
+        [
+          407.0,
+          500.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "key": "edge-06",
+      "source": "owner:actor",
+      "target": "owner:UC-09",
+      "kind": "association",
+      "points": [
+        [
+          122,
+          413
+        ],
+        [
+          407.0,
+          580.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "key": "edge-07",
+      "source": "owner:actor",
+      "target": "owner:UC-12",
+      "kind": "association",
+      "points": [
+        [
+          122,
+          413
+        ],
+        [
+          407.0,
+          660.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "key": "edge-08",
+      "source": "owner:UC-02",
+      "target": "owner:S-01",
+      "kind": "include",
+      "points": [
+        [
+          493.0,
+          340.0
+        ],
+        [
+          647.0,
+          340.0
+        ]
+      ],
+      "label": [
+        570,
+        315,
+        "«include»"
+      ]
+    },
+    {
+      "key": "edge-09",
+      "source": "front:actor",
+      "target": "front:UC-04",
+      "kind": "association",
+      "points": [
+        [
+          1082,
+          453
+        ],
+        [
+          1437.0,
+          180.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "key": "edge-10",
+      "source": "front:actor",
+      "target": "front:UC-17",
+      "kind": "association",
+      "points": [
+        [
+          1082,
+          453
+        ],
+        [
+          1437.0,
+          260.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "key": "edge-11",
+      "source": "front:actor",
+      "target": "front:UC-05",
+      "kind": "association",
+      "points": [
+        [
+          1082,
+          453
+        ],
+        [
+          1437.0,
+          380.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "key": "edge-12",
+      "source": "front:actor",
+      "target": "front:UC-06",
+      "kind": "association",
+      "points": [
+        [
+          1082,
+          453
+        ],
+        [
+          1437.0,
+          500.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "key": "edge-13",
+      "source": "front:actor",
+      "target": "front:UC-12",
+      "kind": "association",
+      "points": [
+        [
+          1082,
+          453
+        ],
+        [
+          1437.0,
+          580.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "key": "edge-14",
+      "source": "front:actor",
+      "target": "front:UC-03",
+      "kind": "association",
+      "points": [
+        [
+          1082,
+          453
+        ],
+        [
+          1437.0,
+          660.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "key": "edge-15",
+      "source": "front:actor",
+      "target": "front:UC-10",
+      "kind": "association",
+      "points": [
+        [
+          1082,
+          453
+        ],
+        [
+          1437.0,
+          740.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "key": "edge-16",
+      "source": "front:UC-17",
+      "target": "front:S-02",
+      "kind": "include",
+      "points": [
+        [
+          1523.0,
+          260.0
+        ],
+        [
+          1697.0,
+          260.0
+        ]
+      ],
+      "label": [
+        1610,
+        235,
+        "«include»"
+      ]
+    },
+    {
+      "key": "edge-17",
+      "source": "front:UC-12",
+      "target": "front:S-03",
+      "kind": "include",
+      "points": [
+        [
+          1523.0,
+          580.0
+        ],
+        [
+          1697.0,
+          580.0
+        ]
+      ],
+      "label": [
+        1610,
+        555,
+        "«include»"
+      ]
+    },
+    {
+      "key": "edge-18",
+      "source": "front:UC-05A",
+      "target": "front:UC-05",
+      "kind": "generalization",
+      "points": [
+        [
+          1697.0,
+          350.0
+        ],
+        [
+          1523.0,
+          380.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "key": "edge-19",
+      "source": "front:UC-05B",
+      "target": "front:UC-05",
+      "kind": "generalization",
+      "points": [
+        [
+          1697.0,
+          460.0
+        ],
+        [
+          1523.0,
+          380.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "key": "edge-20",
+      "source": "care:actor",
+      "target": "care:UC-03",
+      "kind": "association",
+      "points": [
+        [
+          122,
+          1103
+        ],
+        [
+          407.0,
+          930.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "key": "edge-21",
+      "source": "care:actor",
+      "target": "care:UC-07",
+      "kind": "association",
+      "points": [
+        [
+          122,
+          1103
+        ],
+        [
+          407.0,
+          1050.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "key": "edge-22",
+      "source": "care:actor",
+      "target": "care:UC-08",
+      "kind": "association",
+      "points": [
+        [
+          122,
+          1103
+        ],
+        [
+          407.0,
+          1170.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "key": "edge-23",
+      "source": "care:actor",
+      "target": "care:UC-10",
+      "kind": "association",
+      "points": [
+        [
+          122,
+          1103
+        ],
+        [
+          407.0,
+          1290.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "key": "edge-24",
+      "source": "manager:actor",
+      "target": "manager:UC-03",
+      "kind": "association",
+      "points": [
+        [
+          1082,
+          1103
+        ],
+        [
+          1437.0,
+          900.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "key": "edge-25",
+      "source": "manager:actor",
+      "target": "manager:UC-09",
+      "kind": "association",
+      "points": [
+        [
+          1082,
+          1103
+        ],
+        [
+          1437.0,
+          1000.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "key": "edge-26",
+      "source": "manager:actor",
+      "target": "manager:UC-07",
+      "kind": "association",
+      "points": [
+        [
+          1082,
+          1103
+        ],
+        [
+          1437.0,
+          1100.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "key": "edge-27",
+      "source": "manager:actor",
+      "target": "manager:UC-11",
+      "kind": "association",
+      "points": [
+        [
+          1082,
+          1103
+        ],
+        [
+          1437.0,
+          1240.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "key": "edge-28",
+      "source": "manager:E-01",
+      "target": "manager:UC-11",
+      "kind": "extend",
+      "points": [
+        [
+          1697.0,
+          1240.0
+        ],
+        [
+          1523.0,
+          1240.0
+        ]
+      ],
+      "label": [
+        1610,
+        1215,
+        "«extend»"
+      ]
+    },
+    {
+      "key": "edge-29",
+      "source": "admin:actor",
+      "target": "admin:UC-13",
+      "kind": "association",
+      "points": [
+        [
+          122,
+          1633
+        ],
+        [
+          407.0,
+          1640.0
+        ]
+      ],
+      "label": null
+    },
+    {
+      "key": "edge-30",
+      "source": "payment:actor",
+      "target": "payment:UC-14",
+      "kind": "association",
+      "points": [
+        [
+          1200,
+          1640.0
+        ],
+        [
+          1417.0,
+          1640.0
+        ]
+      ],
+      "label": null
+    }
+  ],
+  "note": {
+    "x": 650,
+    "y": 35,
+    "w": 150,
+    "h": 60,
+    "text": "宠物寄宿\\nWeb系统"
+  },
+  "extension_condition": "需要更换或增派照护人员",
+  "extension_point": "突发事项中的人员调配"
+}
