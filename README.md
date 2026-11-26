@@ -2,7 +2,7 @@
 
 面向单家宠物寄养门店的 Web 项目，用于《软件需求工程》课程的需求分析、UML 建模及 MVP 演示。主人通过浏览器预约寄养、查看照护进度，门店工作人员处理分房、入住、照护与离店结算。
 
-当前需求为 **V2.0 草案**，采用主人、店员、店长和系统管理员四类角色。现有 Web Demo（Vue 3 + TypeScript + Vite、Express + TypeScript、SQLite、Session 登录）及历史 API 验收对应 **V1.2**，尚未实现新需求。旧 UML 图、预览和对应报告草稿已删除，待依据新需求重新建模。
+当前需求为 **V2.0 草案**，采用主人、前台接待员、宠物照护员、店长和系统管理员五类人员角色，另有支付平台作为外部参与者。现有 Web Demo（Vue 3 + TypeScript + Vite、Express + TypeScript、SQLite、Session 登录）及历史 API 验收对应 **V1.2**，尚未实现新需求。旧模型已删除，新[用例图分区方案](docs/requirements/02_UML模型/README.md)已按首版流程整理，正式绘图统一采用 Visio 对应 UML 模板；实验二 Word 报告和 VSDX 已生成；Word 排版和 VSDX 结构已检查，Visio 实际打开与人工复核待补。其他模型与报告待完成。
 
 ## 快速开始
 
@@ -121,9 +121,9 @@ node tests/acceptance/run.mjs        # 或 npm run test:acceptance
 
 日常需求讨论只读[需求说明书](docs/requirements/01_项目需求/需求说明书.md)，完整导航见[docs/README.md](docs/README.md)。
 
-- [项目需求](docs/requirements/01_项目需求)：本轮四角色需求草案，规则、验收和待明确事项集中维护。
-- [UML模型](docs/requirements/02_UML模型)：旧模型已删除，保留目录供重新建模。
-- [实验报告](docs/requirements/03_实验报告)：保留[课程与提交说明](docs/requirements/03_实验报告/课程与提交说明.md)，实验二至五报告待根据新模型重新编写。
+- [项目需求](docs/requirements/01_项目需求)：本轮五类人员角色及支付平台需求草案，规则、验收和待明确事项集中维护。
+- [UML模型](docs/requirements/02_UML模型)：首版新用例图、可编辑图源与关系说明，其余模型待建立。
+- [实验报告](docs/requirements/03_实验报告)：保留[课程与提交说明](docs/requirements/03_实验报告/课程与提交说明.md)，实验二报告已按个人模板编排，实验三至五报告待根据新模型编写。
 - 现有 Demo：[API契约](docs/API.md)、[演示操作指南](docs/演示操作指南.md)、[历史验收记录](docs/验收执行记录.md)。
 
 需求草案为 V2.0，现有代码及测试仍为 V1.2。旧需求由 Git 提交 `f2be3e7` 保存，读取方式见需求说明书第 9 节；不另设历史版本文件夹。
